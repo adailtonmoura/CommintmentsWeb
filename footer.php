@@ -1,5 +1,5 @@
 
-<footer>
+<footer style="background-color:black;">
 
 
 </footer>
