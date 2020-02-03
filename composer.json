@@ -1,0 +1,12 @@
+{
+    "name": "commitments/php",
+    "description": "Dependências do meu projeto",
+    "authors": [{
+
+        "name": "Adailton Moura",
+        "email": "adailtonmouradasilvasantos@gmail.com"
+    }],
+    "require": {
+        "twbs/bootstrap": "^4.4"
+    }
+}
