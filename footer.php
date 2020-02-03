@@ -1,5 +1,5 @@
 
-<footer style="background-color:black;">
+<footer class="rodape"style="background-color:black;">
 
 
 </footer>

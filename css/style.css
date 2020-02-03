@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabecalho" "principal" "rodape";
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    grid-area: principal;
+    min-height: calc(100vh - 180px);
+}
+
+.rodape {
+    grid-area: rodape;
+}
