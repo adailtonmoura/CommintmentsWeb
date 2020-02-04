@@ -7,6 +7,7 @@
         "email": "adailtonmouradasilvasantos@gmail.com"
     }],
     "require": {
-        "twbs/bootstrap": "^4.4"
+        "twbs/bootstrap": "^4.4",
+        "components/jquery": "^3.4"
     }
 }
