@@ -5,22 +5,19 @@
 body {
     margin: 0px;
     display: grid;
-    grid-template-rows: 120px 1fr 60px;
+    grid-template-rows: 55px 1fr 60px;
     grid-template-columns: 1fr;
     grid-template-areas: "cabecalho" "principal" "rodape";
 }
 
 .cabecalho {
     grid-area: cabecalho;
-    text-align: center;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
+    background-color: rgba(255, 255, 162, 0.89);
 }
 
 .container {
     grid-area: principal;
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 115px);
 }
 
 .rodape {
