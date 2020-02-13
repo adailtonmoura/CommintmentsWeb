@@ -12,7 +12,7 @@ body {
 
 .cabecalho {
     grid-area: cabecalho;
-    background-color: rgba(255, 255, 162, 0.89);
+    background-color: rgba(255, 255, 81, 0.7);
 }
 
 .container {
@@ -22,4 +22,5 @@ body {
 
 .rodape {
     grid-area: rodape;
+    background-color: rgba(255, 255, 81, 0.7);
 }

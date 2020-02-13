@@ -10,22 +10,22 @@
 	</head>
 	<body>
         <header class="cabecalho">  
-			<nav id="menu"class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+			<nav id="menu"class="navbar navbar-expand-lg navbar-light fixed-top">
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="navbar-brand" href="#" onclick="carregar('view/home.php')">
+							<a class="navbar-brand" href="?pagina=home">
 								<img src="image/post.png" width="30" height="30" class="d-inline-block align-top" alt=""> Commitments
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Login</a>
+							<a class="nav-link" href="?pagina=login">Login</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Registro</a>
+							<a class="nav-link" href="?pagina=registro">Registro</a>
 						</li>
 					</ul>
 				</div>
