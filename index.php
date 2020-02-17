@@ -1,4 +1,8 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php');
+
+require 'vendor/autoload.php';
+
+?>
 
 <div class="container">
 
@@ -9,19 +13,19 @@
         switch($pagina){
         
             case 'login':
-                include_once 'view/login.php';
+                include_once 'App/view/login.php';
                 break;
     
             case 'home':
-                include_once 'view/home.php';
+                include_once 'App/view/home.php';
                 break;
     
             case 'registro':
-                include_once 'view/registro.php';
+                include_once 'App/view/registro.php';
                 break;
     
                 default: 
-                include_once 'view/home.php';
+                include_once 'App/view/home.php';
         }
 
     ?>

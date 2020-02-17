@@ -1,11 +1,12 @@
 <?php
+    namespace App\Controller;
+
     class Database
     {
         private $host,
                 $database,
                 $username,
                 $password,
-                $query,
                 $conection;
         
         private function configDatabase()
@@ -13,28 +14,21 @@
             $this->database = 'Commitments';
             $this->host = 'localhost';
             $this->username = 'root';
-            $this->password = '';
+            $this->password = 'MyPassword';
         }
 
         public function __construct()
         {
-            try
-            {
+            
                 $this->configDatabase();
                 $this->connect();
-                //echo "Conectado com sucesso.";
-            }
-            catch (Exception $e)
-            {
-                echo "Erro ao conectar.";
-            }
+            
         }
 
         public function connect()
         {
-            $query = "mysql:host=" . $this->host . ";dbname=" . $this->database;
-            $this->connection = new PDO ($query, $this->username, $this->password);
-            return $this->connection;
+            $this->conection =  mysqli_connect($this->host,$this->username,$this->password,$this->database);
+            return $this->conection;
         }
     }
 ?>
