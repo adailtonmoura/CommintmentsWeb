@@ -4,7 +4,11 @@
     "authors": [{
 
         "name": "Adailton Moura",
-        "email": "adailtonmouradasilvasantos@gmail.com"
+        "email": "adailtonmouradasilvasantos@gmail.com",
+        "name": "Pedro Silva",
+        "email": "pedro.santos061@academico.ifs.edu.br",
+        "name": "Fernando Morato",
+        "email": "fernandomorato93@gmail.com"
     }],
     "require": {
         "twbs/bootstrap": "^4.4",

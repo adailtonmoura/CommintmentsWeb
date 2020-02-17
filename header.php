@@ -6,18 +6,21 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"> 
 		<title>Commitments</title>
+		<?php require 'vendor/autoload.php'; ?>
 	</head>
 	<body>
         <header class="cabecalho">  
 			<nav id="menu"class="navbar navbar-expand-lg navbar-light fixed-top">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+					aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="navbar-brand" href="?pagina=home">
+							<a class="navbar-brand" href="?pagina=login">
 								<img src="image/post.png" width="30" height="30" class="d-inline-block align-top" alt=""> Commitments
 							</a>
 						</li>

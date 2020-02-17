@@ -28,3 +28,21 @@ body {
 #error {
     color: rgb(223, 76, 76);
 }
+
+#lg-form {
+    position: relative;
+    width: 60%;
+    height: 40%;
+    margin: auto;
+    margin-top: 15%;
+    padding: 3%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'Righteous', cursive;
+    background-color: rgba(255, 255, 81, 0.3);
+}
+
+#lg-form * {
+    display: block;
+    margin-top: 30px;
+}

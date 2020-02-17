@@ -1,7 +1,5 @@
 <?php require_once('header.php');
 
-require 'vendor/autoload.php';
-
 ?>
 
 <div class="container">
@@ -16,16 +14,14 @@ require 'vendor/autoload.php';
                 include_once 'App/view/login.php';
                 break;
     
-            case 'home':
-                include_once 'App/view/home.php';
-                break;
     
             case 'registro':
                 include_once 'App/view/registro.php';
                 break;
     
-                default: 
+            default: 
                 include_once 'App/view/home.php';
+                break;
         }
 
     ?>
