@@ -9,5 +9,10 @@
     "require": {
         "twbs/bootstrap": "^4.4",
         "components/jquery": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
     }
 }
