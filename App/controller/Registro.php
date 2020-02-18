@@ -9,11 +9,6 @@
     $login = isset($_POST['login']) ? $_POST['login'] : '';
     $senha = isset($_POST['senha']) ? ($_POST['senha']) : '';
     $confirmarsenha = isset($_POST['confirmarsenha']) ? ($_POST['confirmarsenha']) : '';
-
-    echo $nome;
-    echo $login;
-    echo $senha;
-    echo $confirmarsenha;
     
     if(!empty($nome) && !empty($login) && !empty($senha) && !empty($confirmarsenha)){
 

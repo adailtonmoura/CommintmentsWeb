@@ -36,7 +36,7 @@
 						<input type="password" name="confirmarsenha" class="form-control" placeholder="confirm password">
 					</div>  
 					<div class="form-group">
-						<input type="submit" value="Cadastrar" id="btn-login" class="btn float-right btn-light">
+						<input type="submit" value="Cadastrar" id="btn-login" class="btn float-right btn-warning">
                     </div>
                     <?php if(isset($_GET['erro'])){?>
                         <span id="error"><?= $_GET['erro'] ?></span>

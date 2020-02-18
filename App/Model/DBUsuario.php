@@ -29,24 +29,17 @@
             
             function cadastrarUsuario($nome,$login,$senha)
             {
-                if(!empty($nome) && !empty($login) && !empty($senha)){
+                    $data = new Database(); //Instanciando o App/Controller/Database.php
 
-                    $data = new Database();
+                    $sql = "INSERT INTO `usuario`(`Nome`, `login`, `Senha`) VALUES ('$nome','$login','$senha')"; //Montando a query do select
 
-                    $sql = "INSERT INTO `usuario`(`Nome`, `login`, `Senha`) VALUES ('$nome','$login','$senha')";
-
-                    $result = mysqli_query($data->connect(),$sql);
+                    $result = mysqli_query($data->connect(),$sql);//Executando a query do select
 
                     if ($result == true) {
                         return true;
                     }else{
                         return false;
                     }
-
-                }else{
-                    return "Preencha todos os campos";
-                }
-
             }
             function verificarLogin($login){
                 $data = new Database();
