@@ -8,7 +8,6 @@
             
             function validarLogin($login,$senha)
             {    
-                if(!empty($login) && !empty($senha)){
 
                     $data = new Database();
 
@@ -22,9 +21,6 @@
                         return false;
                     }
 
-                }else{
-                    return "Preencha todos os campos";
-                }
             }
             
             function cadastrarUsuario($nome,$login,$senha)
