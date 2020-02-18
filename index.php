@@ -1,6 +1,6 @@
-<?php require_once('header.php');
+<?php require 'vendor/autoload.php'; ?>
 
-?>
+<?php require_once('header.php');?>
 
 <div class="container">
 
@@ -9,18 +9,18 @@
         $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 'home';
 
         switch($pagina){
-        
+            
+
             case 'login':
                 include_once 'App/view/login.php';
                 break;
-    
     
             case 'registro':
                 include_once 'App/view/registro.php';
                 break;
     
             default: 
-                include_once 'App/view/home.php';
+                include_once 'App/view/login.php';
                 break;
         }
 

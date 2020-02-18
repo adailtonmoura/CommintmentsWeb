@@ -7,30 +7,16 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 		<title>Commitments</title>
-		<?php require 'vendor/autoload.php'; ?>
 	</head>
 	<body>
         <header class="cabecalho">  
-			<nav id="menu"class="navbar navbar-expand-lg navbar-light fixed-top">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
-					aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="navbar-brand" href="?pagina=login">
-								<img src="image/post.png" width="30" height="30" class="d-inline-block align-top" alt=""> Commitments
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="?pagina=login">Login</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="?pagina=registro">Registro</a>
-						</li>
-					</ul>
-				</div>
+			<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="?pagina=login">
+				<img src="image/post.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				Commitments
+			</a>
 			</nav>
         </header>
