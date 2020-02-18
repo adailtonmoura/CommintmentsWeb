@@ -14,7 +14,7 @@
             $this->database = 'Commitments';
             $this->host = 'localhost';
             $this->username = 'root';
-            $this->password = '';
+            $this->password = 'MyPassword';
         }
 
         public function __construct()
