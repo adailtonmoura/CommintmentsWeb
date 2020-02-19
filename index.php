@@ -14,8 +14,13 @@
         switch($pagina){
             
             case 'home':
-                include_once 'App/view/home.php';
+                if(isset ($_SESSION['usuario-logado'])) { 
+                    include_once 'App/view/home.php';
+                }else{
+                    include_once 'App/view/login.php';
+                }
                 break;
+
             case 'login':
                 include_once 'App/view/login.php';
                 break;

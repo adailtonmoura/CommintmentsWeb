@@ -24,7 +24,7 @@
 				<p id="logado">Logado como <a class="navbar-brand" id="usuario" href="App/Controller/VerPerfil.php"><?= $_SESSION['username']; ?></a></p>
 			<?php } else{ ?>
 
-			<a class="navbar-brand" href="?pagina=login">
+			<a class="navbar-brand" href="?pagina=home">
 				<img src="image/post.png" width="30" height="30" class="d-inline-block align-top" alt="">
 				Commitments
 			</a>
