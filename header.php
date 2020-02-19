@@ -20,9 +20,18 @@
 	<body>
         <header class="cabecalho">  
 			<nav class="navbar navbar-light bg-light">
+			<?php  if(isset ($_SESSION['usuario-logado'])) { ?>
+				<p id="logado">Logado como <a class="navbar-brand" id="usuario" href="App/Controller/VerPerfil.php"><?= $_SESSION['username']; ?></a></p>
+			<?php } else{ ?>
+
 			<a class="navbar-brand" href="?pagina=login">
 				<img src="image/post.png" width="30" height="30" class="d-inline-block align-top" alt="">
 				Commitments
 			</a>
+			<?php }?>
+			
+			<?php  if(isset ($_SESSION['usuario-logado'])) { ?>
+				<a id="sair" href="App/Controller/DestruirSessao.php">Sair</a>
+			<?php }?>
 			</nav>
         </header>

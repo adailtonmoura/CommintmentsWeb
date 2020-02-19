@@ -81,6 +81,22 @@ input:focus {
     color: rgb(223, 76, 76);
 }
 
+#sair {
+    color: red;
+    text-decoration: none;
+}
+
+#logado {
+    margin: 0px;
+    font-size: 1.1rem;
+}
+
+#usuario {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: rgb(90, 134, 230);
+}
+
 .links {
     color: white;
 }

@@ -7,8 +7,8 @@
     
     $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
     $login = isset($_POST['login']) ? $_POST['login'] : '';
-    $senha = isset($_POST['senha']) ? ($_POST['senha']) : '';
-    $confirmarsenha = isset($_POST['confirmarsenha']) ? ($_POST['confirmarsenha']) : '';
+    $senha = isset($_POST['senha']) ? md5($_POST['senha']) : '';
+    $confirmarsenha = isset($_POST['confirmarsenha']) ? md5($_POST['confirmarsenha']) : '';
     
     if(!empty($nome) && !empty($login) && !empty($senha) && !empty($confirmarsenha)){
 

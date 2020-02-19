@@ -16,7 +16,7 @@
                     $result = mysqli_query($data->connect(),$sql);
 
                     if (mysqli_num_rows($result) == 1) {
-                        return true;
+                        return $result;
                     }else{
                         return false;
                     }

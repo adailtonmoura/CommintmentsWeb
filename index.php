@@ -1,4 +1,7 @@
-<?php require 'vendor/autoload.php'; ?>
+<?php require 'vendor/autoload.php'; 
+            session_start();
+
+?>
 
 <?php require_once('header.php');?>
 
@@ -10,7 +13,9 @@
 
         switch($pagina){
             
-
+            case 'home':
+                include_once 'App/view/home.php';
+                break;
             case 'login':
                 include_once 'App/view/login.php';
                 break;
