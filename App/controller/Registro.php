@@ -2,7 +2,7 @@
  require '../../vendor/autoload.php';
 
     
-    use App\Model\DBUsuario;
+    use App\Classes\Usuario;
 
     
     $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
@@ -14,11 +14,14 @@
 
         if($confirmarsenha == $senha){
 
-            $dbuser = new DBUsuario();
+            $user =  new Usuario();
+            $user -> setNome($nome);
+            $user -> setLogin($login);
+            $user -> setSenha($senha);
 
-            if($dbuser->verificarLogin($login) == false){
+            if($user->loginDisponivel() == false){
 
-                $result = $dbuser -> cadastrarUsuario($nome,$login,$senha);
+                $result = $user -> novoUsuario();
                 
                 if($result == true){
                     header("Location: https://localhost/CommitmentsWeb/?pagina=login");  

@@ -28,6 +28,10 @@
             case 'registro':
                 include_once 'App/view/registro.php';
                 break;
+
+            case 'teste':
+                include_once 'App/view/teste.php';
+                break;
     
             default: 
                 include_once 'App/view/login.php';

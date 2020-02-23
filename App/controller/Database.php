@@ -1,7 +1,9 @@
 <?php
     namespace App\Controller;
 
-    class Database
+use PDO;
+
+class Database
     {
         private $host,
                 $database,
@@ -27,7 +29,7 @@
 
         public function connect()
         {
-            $this->conection =  mysqli_connect($this->host,$this->username,$this->password,$this->database);
+            $this->conection = new PDO("mysql:host={$this->host};dbname={$this->database}","$this->username",$this->password);
             return $this->conection;
         }
     }

@@ -1,29 +1,25 @@
 <?php
     namespace App\Classes;
+    use App\Model\DBUsuario;
+
     class Usuario
 {
     private $nome;
-    private $email;
+    private $login;
     private $senha;
 
-        public function __construct($nome_p,$email_p,$senha_p)
-        {
-        $this->setNome($nome_p);
-        $this->setEmail($email_p);
-        $this->setSenha($senha_p);
-        }
 
         public function getNome()
         {
             return $this->nome;
         }
 
-        public function getEmail()
+        public function getLogin()
         {
-            return $this->email;
+            return $this->login;
         }
 
-        public function getPassword()
+        public function getSenha()
         {
             return $this->senha;
         }
@@ -33,14 +29,43 @@
             $this->nome = $nome_p;
         }
 
-        public function setEmail($email_p)
+        public function setLogin($login_p)
         {
-            $this->email = $email_p;
+            $this->login = $login_p;
         }
 
         public function setSenha($senha_p)
         {
             $this->senha = $senha_p;
+        }
+
+        public function novoUsuario (){
+            $data = new DBUsuario();
+
+            return $data -> cadastrarUsuario($this->getNome(),$this->getLogin(),$this->getSenha());
+        }
+
+        public function loginDisponivel(){
+            $data = new DBUsuario();
+
+            return $data -> validarLogin($this->getLogin());
+        }
+        
+        public function dadosUsuario(){
+            $data = new DBUsuario;
+
+            if($data -> pegarDados($this->getLogin(),$this->getSenha()) != false){
+
+                $dados = $data -> pegarDados($this -> getLogin() , $this->getSenha());
+
+                $this->setNome($dados['Nome']);
+                $this->setLogin($dados['login']);
+                $this->setSenha($dados['Senha']);
+
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 ?>

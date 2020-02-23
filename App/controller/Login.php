@@ -2,31 +2,31 @@
  require '../../vendor/autoload.php';
 
     
-    use App\Model\DBUsuario;
+    use App\Classes\Usuario;
 
     $login = isset($_POST['login']) ? $_POST['login'] : '';
     $senha = isset($_POST['senha']) ? md5($_POST['senha']) : '';    
 
     if(!empty($login) && !empty($senha)){
-        $dbuser = new DBUsuario();
+        $user = new Usuario();
+        $user -> setLogin($login);
+        $user -> setSenha($senha);
 
-        if($dbuser -> validarLogin($login,$senha) != false){
+        if($user -> dadosUsuario() != false){
             session_start();
     
-        $usuario = mysqli_fetch_assoc($dbuser -> validarLogin($login,$senha));
-
         $_SESSION['usuario-logado'] = true;
-        $_SESSION['username'] = $usuario['Nome'];
+        $_SESSION['username'] = $user -> getNome();
 
 
-        header("Location: https://localhost/CommitmentsWeb/?pagina=home");
+       header("Location: https://localhost/CommitmentsWeb/?pagina=home");
         
         }
         else 
-            if($dbuser -> validarLogin($login,$senha) == false){
-                header("Location: https://localhost/CommitmentsWeb/?pagina=login&erro= Login ou Senha invalidos!");
+            if($user -> dadosUsuario($login,$senha) == false){
+                //header("Location: https://localhost/CommitmentsWeb/?pagina=login&erro= Login ou Senha invalidos!");
             }
     }else{
-       header("Location: https://localhost/CommitmentsWeb/?pagina=login&erro= Preencha todos os campos!");
+      // header("Location: https://localhost/CommitmentsWeb/?pagina=login&erro= Preencha todos os campos!");
     }
 ?>

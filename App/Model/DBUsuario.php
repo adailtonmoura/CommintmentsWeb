@@ -2,49 +2,73 @@
     
     namespace App\Model;
     use App\Controller\Database;
+use PDO;
+use PDOException;
 
-        class DBUsuario
+class DBUsuario
         {
-            
-            function validarLogin($login,$senha)
+            function pegarDados($login,$senha)
             {    
 
-                    $data = new Database();
+                    try{
+                        $data = new Database();
 
-                    $sql = "SELECT *FROM `usuario` WHERE login = '$login' and  senha = '$senha'";
+                        $sql = "SELECT *FROM `usuario` 
+                        WHERE login = '$login' 
+                        and  senha = '$senha'";
+                        
+                        $pdo = $data->connect(); //recebendo a conexão;
+                        $stmt = $pdo->prepare($sql);    //preparando a sql para ser executada;
+                        $stmt->execute();   //executando a sql;
 
-                    $result = mysqli_query($data->connect(),$sql);
+                        $linhas = $stmt->rowCount(); //contando as linhas afetadas com a execução da query sql;
 
-                    if (mysqli_num_rows($result) == 1) {
-                        return $result;
-                    }else{
-                        return false;
+                        if($linhas == 1){
+                            return $stmt-> fetch(PDO::FETCH_ASSOC);
+                        }else{
+                            return false;
+                        }
+
+                    }catch(PDOException $e){
+                        print "Erro: ". $e->getMessage() . "<br>";
+                        die();
                     }
+
+                    
 
             }
             
             function cadastrarUsuario($nome,$login,$senha)
             {
-                    $data = new Database(); //Instanciando o App/Controller/Database.php
+                    $data = new Database(); //Instanciando a minha classe de banco de dados
 
-                    $sql = "INSERT INTO `usuario`(`Nome`, `login`, `Senha`) VALUES ('$nome','$login','$senha')"; //Montando a query do select
+                    $sql = "INSERT INTO `usuario`(`Nome`, `login`, `Senha`) VALUES ('$nome','$login','$senha')"; //Montando a linha sql
 
-                    $result = mysqli_query($data->connect(),$sql);//Executando a query do select
+                    $pdo = $data->connect(); //Recebendo a conexão;
+                    $stmt = $pdo->prepare($sql);    //Rreparando a sql para ser executada;
+                    $stmt->execute();   //Executando a sql;
 
-                    if ($result == true) {
+                    $linhas = $stmt->rowCount(); //Contando as linhas afetadas com a execução da query sql;
+
+                    if ($linhas == 1) {
                         return true;
                     }else{
                         return false;
                     }
             }
-            function verificarLogin($login){
-                $data = new Database();
+            function validarLogin($login){
 
-                $sql = "SELECT *FROM `usuario` WHERE login = '$login'";
+                $data = new Database(); //Instaciando minha classe de banco de dados;
 
-                $result = mysqli_query($data->connect(),$sql);
+                $sql = "SELECT *FROM `usuario` WHERE login = '$login' ";  // Montando a linha sql;
 
-                if (mysqli_num_rows($result) == 1) {
+                $pdo = $data->connect(); //Recebendo a conexão;
+                $stmt = $pdo->prepare($sql);    //Preparando a sql para ser executada;
+                $stmt->execute();   //Executando a sql;
+
+                $linhas = $stmt->rowCount(); //Contando as linhas afetadas com a execução da query sql;
+
+                if($linhas == 1){
                     return true;
                 }else{
                     return false;
