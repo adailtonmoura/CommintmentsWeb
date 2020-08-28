@@ -3,9 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 html,
 body {
-    background-image: url('http://localhost/commitmentsweb/image/wallpaper1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #dbdbdb;
     height: 100%;
     font-family: 'Numans', sans-serif;
 }
